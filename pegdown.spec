@@ -1,7 +1,7 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 Name:          pegdown
 Version:       1.1.0
-Release:       6.0%{?dist}
+Release:       6.1%{?dist}
 Summary:       Java library for Markdown processing
 License:       ASL 2.0
 URL:           http://pegdown.org
