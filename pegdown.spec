@@ -5,7 +5,7 @@ Release:       3.4
 Summary:       Java library for Markdown processing
 Group:		Development/Java
 License:       ASL 2.0
-URL:           http://pegdown.org
+URL:           https://pegdown.org
 Source0:       https://github.com/sirthias/pegdown/archive/%{version}.tar.gz
 # Newer release use sbt builder
 Source1:       http://repo1.maven.org/maven2/org/pegdown/pegdown/%{version}/pegdown-%{version}.pom
