@@ -1,7 +1,7 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name:          pegdown
-Version:       1.4.2
-Release:       3.4
+Version:       1.6.0
+Release:       1
 Summary:       Java library for Markdown processing
 Group:		Development/Java
 License:       ASL 2.0
@@ -17,7 +17,7 @@ BuildRequires: mvn(org.parboiled:parboiled-java)
 # test deps
 BuildRequires: mvn(net.sf.jtidy:jtidy)
 %if 0
-BuildRequires: mvn(org.specs2:specs2_2.9.3)
+BuildRequires: mvn(org.specs2:specs2-core_2.11)
 %endif
 BuildRequires: maven-local
 
@@ -34,10 +34,10 @@ Summary:       Javadoc for %{name}
 This package contains javadoc for %{name}.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}
 find . -name "*.class" -delete
 find . -name "*.jar" -delete
-%patch0 -p1
+%patch -P0 -p1
 
 cp -p %{SOURCE1} pom.xml
 
@@ -93,7 +93,7 @@ cp -p %{SOURCE1} pom.xml
 </executions>"
 
 rm -r src/test/scala/*
-%pom_remove_dep org.specs2:specs2_2.9.3
+%pom_remove_dep org.specs2:specs2-core_2.11
 
 %build
 
